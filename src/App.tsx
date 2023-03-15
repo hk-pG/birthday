@@ -28,7 +28,7 @@ function App() {
           damping: 20,
         }}
       >
-        <img height={height} src={birthday} alt="お誕生日おめでとう" />
+        <img className="b-img" src={birthday} alt="お誕生日おめでとう" />
       </motion.div>
     </div>
   );
