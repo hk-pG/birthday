@@ -5,19 +5,26 @@ import { motion } from "framer-motion";
 import "./App.css";
 import useSound from "use-sound";
 import Sound from "./assets/birthday.mp4";
+import Music from "./assets/music.mp3";
 
 function App() {
   const { width, height } = useWindowSize();
   const [play, { stop, pause }] = useSound(Sound);
+  const [playMusic] = useSound(Music);
+  let isPlayedMusic = false;
 
   return (
     <div
       onClick={() => {
         play();
+        if (!isPlayedMusic) {
+          playMusic({});
+          isPlayedMusic = true;
+        }
       }}
       className="App"
     >
-      <Confetti width={width * 4} height={height * 2} recycle={true} />
+      <Confetti width={width * 1.5} height={height * 1.5} recycle={true} />
       <motion.div
         className="container"
         initial={{ scale: 0 }}
