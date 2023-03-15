@@ -3,12 +3,20 @@ import { useWindowSize } from "react-use";
 import birthday from "./assets/birthday.png";
 import { motion } from "framer-motion";
 import "./App.css";
+import useSound from "use-sound";
+import Sound from "./assets/birthday.mp4";
 
 function App() {
   const { width, height } = useWindowSize();
+  const [play, { stop, pause }] = useSound(Sound);
 
   return (
-    <div onClick={() => {}} className="App">
+    <div
+      onClick={() => {
+        play();
+      }}
+      className="App"
+    >
       <Confetti width={width} height={height} recycle={true} />
       <motion.div
         className="container"
