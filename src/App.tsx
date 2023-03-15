@@ -17,7 +17,7 @@ function App() {
       }}
       className="App"
     >
-      <Confetti width={width} height={height} recycle={true} />
+      <Confetti width={width * 4} height={height * 2} recycle={true} />
       <motion.div
         className="container"
         initial={{ scale: 0 }}
