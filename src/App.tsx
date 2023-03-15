@@ -1,6 +1,6 @@
 import Confetti from "react-confetti";
 import { useWindowSize } from "react-use";
-import birthday from "./assets/birthday.png";
+import birthday from "./assets/birthday2.png";
 import { motion } from "framer-motion";
 import "./App.css";
 import useSound from "use-sound";
@@ -24,7 +24,7 @@ function App() {
       }}
       className="App"
     >
-      <Confetti width={width * 1.5} height={height * 1.5} recycle={true} />
+      <Confetti width={width} height={height} recycle={true} />
       <motion.div
         className="container"
         initial={{ scale: 0 }}
